@@ -29,9 +29,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //Запускаем встроенный Сервис по умолчанию
-        binding.buttonDefaultService.setOnClickListener {
-           val intService = DefaultService.launchDefaultService(this, message = "Test message from MainActivity")
+        val intService =
+            DefaultService.launchDefaultService(this, message = "Test message from MainActivity")
+        binding.buttonDefaultServiceStart.setOnClickListener {
             startService(intService)
+        }
+        //останавливаем сервис
+        binding.buttonDefaultServiceStop.setOnClickListener {
+            stopService(intService)
         }
 
 

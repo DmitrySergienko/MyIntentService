@@ -42,8 +42,12 @@ class DefaultService : Service() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         Log.d(
             TAG,
-            "onStartCommand() called with: intent = $intent, flags = $flags, startId = $startId"
-        )
+            "onStartCommand() called with: intent = $intent, flags = $flags, startId = $startId")
+        Thread{
+            Thread.sleep(2000)
+            stopSelf(startId) //останавливается по завершении операции
+
+        }.start()
         return super.onStartCommand(intent, flags, startId)
 
 
