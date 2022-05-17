@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.buttonDefaultService.setOnClickListener {
+            val intService = Intent(this, DefaultService::class.java)
+            startService(intService)
+        }
+
+
         mProgressBar = binding.progressbar
 
         binding.buttonStart.setOnClickListener(View.OnClickListener {
