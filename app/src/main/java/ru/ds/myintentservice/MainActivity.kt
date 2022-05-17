@@ -28,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Запускаем встроенный Сервис по умолчанию
         binding.buttonDefaultService.setOnClickListener {
-            val intService = Intent(this, DefaultService::class.java)
+           val intService = DefaultService.launchDefaultService(this, message = "Test message from MainActivity")
             startService(intService)
         }
 
