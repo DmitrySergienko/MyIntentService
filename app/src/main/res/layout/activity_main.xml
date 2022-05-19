@@ -47,6 +47,17 @@
 
     </LinearLayout>
 
+
+    <Button
+        android:id="@+id/button_default_intent_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/black"
+        android:background="@color/cardview_light_background"
+        android:text="@string/default_intent_service" />
+
+
     <Button
         android:id="@+id/button_default_service_start"
         android:layout_width="wrap_content"

@@ -58,7 +58,15 @@ class MainActivity : AppCompatActivity() {
 
         myCustomIntentService() //My custom IntentService
         defaultService() //Default Service
+        defaultIntentService()//Default IntentService
 
+    }
+
+    private fun defaultIntentService() {
+
+        binding.buttonDefaultIntentService.setOnClickListener {
+            DefaultIntentService.startDefaultIntentService(this, "Default Intent Service")
+        }
     }
 
     //-------------------------------------------
@@ -89,6 +97,7 @@ class MainActivity : AppCompatActivity() {
                 //applicationContext.startForegroundService(intService)
             }
         }
+
     }
 
     //-------------------------------------------
