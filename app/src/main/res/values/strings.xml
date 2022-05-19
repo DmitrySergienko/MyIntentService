@@ -2,9 +2,12 @@
     <string name="app_name">MyIntentService</string>
     <string name="start_default_service">Start Default Service via Intent</string>
     <string name="stop_default_service">Stop Default Service</string>
-    <string name="stop">Stop</string>
-    <string name="start">Start</string>
-    <string name="Service_task">Результат выполения задачи сервиса</string>
+    <string name="stop">Stop IntentService</string>
+    <string name="start">Start IntentService</string>
+    <string name="task_completed">Task Completed</string>
+
+    <string name="Service_task">IntentService Result</string>
     <string name="stop_default_service_bind">bind to default service</string>
     <string name="stop_default_service_unbind">unbind to service</string>
+    <string name="stop_foreground_service">start foreground service</string>
 </resources>

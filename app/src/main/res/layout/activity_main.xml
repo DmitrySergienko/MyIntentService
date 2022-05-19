@@ -79,4 +79,12 @@
         android:backgroundTint="@color/black"
         android:text="@string/stop_default_service_unbind" />
 
+    <Button
+        android:id="@+id/button_foreground_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/black"
+        android:text="@string/stop_foreground_service" />
+
 </LinearLayout>

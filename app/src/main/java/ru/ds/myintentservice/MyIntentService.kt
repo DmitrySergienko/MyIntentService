@@ -6,9 +6,11 @@ import android.app.NotificationManager
 import android.content.Intent
 import android.widget.Toast
 
+//intentService Сервис работает в фоновом потоке
 
 class MyIntentService : IntentService("MyService") {
-    var extraOut = "Задание выполненно"
+
+    var extraOut = "Completed"
     private var mNotificationManager: NotificationManager? = null
     private var mIsSuccess = false
     private var mIsStopped = false

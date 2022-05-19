@@ -7,6 +7,9 @@ import android.os.Binder
 import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
+import androidx.core.app.NotificationChannelCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 
 class DefaultService : Service() {
 
@@ -15,7 +18,7 @@ class DefaultService : Service() {
         const val GET_EXTRA = "GET_EXTRA"
 
         //этот метод позволяет запускать сервис в данном случае из MainActivity запускать Intent
-        //немного разружает mainActivity сохраняя в себе логику запука Intent
+        //разружает mainActivity сохраняя в себе логику запука Intent
         fun launchDefaultService(context: Context, message: String): Intent {
             val intService = Intent(context, DefaultService::class.java)
             intService.putExtra(GET_EXTRA, message)
@@ -24,8 +27,10 @@ class DefaultService : Service() {
         }
     }
 
+
     override fun onCreate() {
         super.onCreate()
+
         Log.d(TAG, "onCreate() called")
     }
 

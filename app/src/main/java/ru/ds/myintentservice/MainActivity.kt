@@ -1,6 +1,7 @@
 package ru.ds.myintentservice
 
 import android.content.*
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
@@ -50,14 +51,13 @@ class MainActivity : AppCompatActivity() {
     //------------------------------------------
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         myCustomIntentService() //My custom IntentService
         defaultService() //Default Service
-
 
     }
 
@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonDefaultServiceUnbind.setOnClickListener {
             unbindService(connection)
+        }
+        binding.buttonForegroundService.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                //applicationContext.startForegroundService(intService)
+            }
         }
     }
 
